@@ -71,7 +71,30 @@
                     <a id="modal-footer-signup" onclick="CloseSignIn(); SignUp();">Sign Up</a>
                 </div>
             </div>
+
+            <div class="modal-content modal-popup" id="modal-createpost">
+                <div class="modal-heading">
+                    <span class="modal-title">Pen Your Post</span>
+                    <button class="modal-close" onclick="CloseCreatePost()">&times;</button>
+                </div>
+                <form>
+                    <span class="modal-field">Title</span>
+                    <input type="text" name="createpost-title" placeholder="Enter title of your post" required>
+                    <span class="modal-field">Contents</span>
+                    <textarea  rows="10" name="createpost-contents" placeholder="Enter the contents of your post" required></textarea>
+                    <div id="modal-submit-createpost">
+                        <button class="modal-submit" id="modal-submit-post-btn">Create</button>
+                    </div>
+                </form>
+            </div>
+
         </div>
+
+        <div id="content">
+            <button onclick="getAllPosts()">All Posts</button>
+            <button onclick="CreatePost()">Create Post</button>
+        </div>
+
 
     </body>
 </html>

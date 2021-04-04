@@ -17,6 +17,7 @@ body {
 
 #modal-container {
     display: none;
+    z-index: 1;
     position: fixed;
     overflow: auto;
     left: 0px;
@@ -121,4 +122,42 @@ body {
     color: white;
     font-size: 14px;
     margin: 16px 0;
+}
+
+#modal-createpost {
+    display: none;
+    height: 510px;
+    width: 500px;
+    margin-left: -250px;
+}
+
+#modal-submit-createpost {
+    text-align: center;
+}
+
+#modal-submit-post-btn {
+    width: unset;
+    padding: 9px 25px;
+}
+
+#content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 40px;
+    width: 260px;
+    margin-top: -20px;
+    margin-left: -130px;
+}
+
+#content button {
+    padding: 6px 20px;
+    background-color: #CFB53B;
+    color: black;
+    font-size: 16px;
+    border-color: #DDD;
 }
