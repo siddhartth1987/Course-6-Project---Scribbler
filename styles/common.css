@@ -27,12 +27,3 @@ header {
     font-family: "Ubuntu Mono", monospace;
     font-size: 15px;
 }
-
-#centralPane button {
-    background-color: blue;
-    color: white;
-    border-color: gray;
-    padding: 6px 20px;
-    font-size: 14px;
-    margin: 0 6px;
-}
