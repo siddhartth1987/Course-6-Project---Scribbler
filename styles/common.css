@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+#heading {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#heading-title {
+    color: blue;
+    font-family: "Montez", cursive;
+    font-size: 35px;
+}
+
+#subheading {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 15px;
+}

@@ -1,13 +1,100 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <!-- TODO: Include Font Awesome file here -->
+        <script src="https://kit.fontawesome.com/cbf741d6c7.js" crossorigin="anonymous"></script>
+        <!-- TODO: Include Google Fonts file here -->
+        <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 
-<head>
-    <!-- TODO: Include Font Awesome file here -->
-    <!-- TODO: Include Google Fonts file here -->
-</head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+              integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-<body>
-<!-- TODO: Include all your code for the header and home page here -->
-</body>
+        <!-- Links to custom stylesheets -->
+        <link href="./styles/common.css" rel="stylesheet" >
+        <link href="./styles/index.css" rel="stylesheet" >
 
+        <!-- Title and links to js -->
+        <script defer src="./scripts/common.js"></script>
+        <script defer src="./scripts/index.js"></script>
+        <title>ScriBBler</title>
+
+    </head>
+
+    <body>
+    <!-- TODO: Include all your code for the header and home page here -->
+        <header class="container-fluid">
+            <div id="heading">
+                <span id="heading-title">ScriBBler</span>
+                <span id="subheading">Explore, Imagine, Create</span>
+            </div>
+            <div id="centralPane">
+                <button id="button-signup" onclick="SignUp()">Sign Up</button>
+                <button id="button-signin" onclick="SignIn()">Sign In</button>
+            </div>
+        </header>
+
+        <div id="modal-container">
+            <div class="modal-content modal-popup" id="modal-signup">
+                <div class="modal-heading">
+                    <span class="modal-title">Get Started</span>
+                    <button class="modal-close" onclick="CloseSignUp()">&times;</button>
+                </div>
+                <form>
+                    <span class="modal-field">Name</span>
+                    <input type="text" name="signup-name" placeholder="Enter your name" required>
+                    <span class="modal-field">Username</span>
+                    <input type="text" name="signup-username" placeholder="Enter your username" required>
+                    <span class="modal-field">Password</span>
+                    <input type="password" name="signup-password" placeholder="Enter your password" required>
+                    <span class="modal-field">Confirm Password</span>
+                    <input type="password" name="signup-reenter-password" placeholder="Re-enter your password" required>
+                    <button class="modal-submit">Sign Up</button>
+                </form>
+            </div>
+
+            <div class="modal-content modal-popup" id="modal-signin">
+                <div class="modal-heading">
+                    <span class="modal-title">Welcome Back!</span>
+                    <button class="modal-close" onclick="CloseSignIn()">&times;</button>
+                </div>
+                <form>
+                    <span class="modal-field">Username</span>
+                    <input type="text" name="signin-username" placeholder="Enter your username" required>
+                    <span class="modal-field">Password</span>
+                    <input type="password" name="signin-password" placeholder="Enter your password" required>
+                    <button class="modal-submit">Sign In</button>
+                </form>
+                <div id="modal-footer">
+                    <span>Not a member?</span>
+                    <a id="modal-footer-signup" onclick="CloseSignIn(); SignUp();">Sign Up</a>
+                </div>
+            </div>
+
+            <div class="modal-content modal-popup" id="modal-createpost">
+                <div class="modal-heading">
+                    <span class="modal-title">Pen Your Post</span>
+                    <button class="modal-close" onclick="CloseCreatePost()">&times;</button>
+                </div>
+                <form>
+                    <span class="modal-field">Title</span>
+                    <input type="text" name="createpost-title" placeholder="Enter title of your post" required>
+                    <span class="modal-field">Contents</span>
+                    <textarea  rows="10" name="createpost-contents" placeholder="Enter the contents of your post" required></textarea>
+                    <div id="modal-submit-createpost">
+                        <button class="modal-submit" id="modal-submit-post-btn">Create</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div id="content">
+            <button onclick="getAllPosts()">All Posts</button>
+            <button onclick="CreatePost()">Create Post</button>
+        </div>
+
+
+    </body>
 </html>
